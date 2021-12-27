@@ -1,0 +1,15 @@
+// ========== Root Global Styles
+@import 'fonts';
+@import 'variables';
+@import 'mixins';
+
+html {
+	background-color: white;
+	font-size: 16px;
+	font-family: base-font;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
