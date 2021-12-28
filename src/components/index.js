@@ -1,4 +1,6 @@
 /* eslint-disable import/export */
 // ========== Bootstrapping Components
-export * from './loading/Loading'
+export * from './navbar/Navbar'
 export * from './container/Container'
+export * from './hero/Hero'
+export * from './button/Button'

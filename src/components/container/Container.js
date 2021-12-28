@@ -9,7 +9,7 @@ import styled from './style/style.module.scss'
 export function Container (props) {
   return (
 		<Fragment>
-			<div className={styled.container}>
+			<div className={`${props.fluid ? styled['container-fluid'] : styled.container} ${props.className}`}>
 				{ props.children }
 			</div>
 		</Fragment>

@@ -1,4 +1,13 @@
+%container-margin {
+	margin: 0 auto;
+}
+
 div.container {
 	width: 90%;
-	margin: 0 auto;
+	@extend %container-margin;	
+}
+
+div.container-fluid {
+	width: 100%;
+	@extend %container-margin;
 }

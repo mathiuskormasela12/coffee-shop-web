@@ -5,21 +5,26 @@ import React, { Fragment, Component } from 'react'
 import { connect } from 'react-redux'
 
 // import all components
-import { Loading, Container } from '../components'
+import {
+  Container,
+  Navbar,
+  Hero
+} from '../components'
 
 class Home extends Component {
+  componentDidMount () {
+    document.title = 'Coffee Shop | Home'
+  }
+
   render () {
     return (
 			<Fragment>
-				<Container>
-					<h1>Home {this.props.token && 'TOKEN'}</h1>
-					<Loading />
-					{
-						this.props.loading && (
-							<p>Loading...</p>
-						)
-					}
-				</Container>
+				<Hero>
+					<Container fluid>
+						<Navbar />
+						<h1>Home</h1>
+					</Container>
+				</Hero>
 			</Fragment>
     )
   }
