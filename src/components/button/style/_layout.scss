@@ -3,6 +3,7 @@ button.btn {
 	border: none;
 	border-radius: 10px;
 	cursor: pointer;
+	box-sizing: border-box;
 }
 
 button.rounded {
@@ -14,23 +15,65 @@ button.primary {
 	color: $secondary;
 	font-weight: normal;
 	font-family: base-font;
+	transition: opacity .5s;
+
+	&:hover {
+		opacity: 0.5;
+	}
 }
 
-button.secodary {
-	background-color: $primary;
+button.primary-outline {
+	background-color: transparent;
+	outline: 1px solid $primary;
+	color: $secondary;
+	font-weight: normal;
+	font-family: base-font;
+	transition: background-color .5s, color .5s;
+
+	&:hover {
+		background-color: $primary;
+		color: $secondary;
+	}
+}
+
+button.secondary {
+	background-color: $secondary;
 	color: $white;
 	font-weight: normal;
-	font-family: bold-font;
+	font-family: base-font;
+	transition: opacity .5s;
+
+	&:hover {
+		opacity: 0.5;
+	}
+}
+
+button.secondary-outline {
+	background-color: transparent;
+	outline: 1px solid $secondary;
+	color: $primary;
+	font-weight: normal;
+	font-family: base-font;
+	transition: background-color .5s, color .5s;
+
+	&:hover {
+		background-color: $secondary;
+		color: $white;
+	}
 }
 
 button.no-outline {
 	background-color: transparent;
-	color: $brand-text-color;
+	color: $secondary;
+
+	&:hover {
+		font-weight: bold;
+	}
 }
 
 button.lg {
-	padding: 1.5rem 2.5rem;
-	font-size: 1.4rem;
+	padding: 1.2rem 3rem;
+	font-size: 1rem;
 }
 
 button.md {
